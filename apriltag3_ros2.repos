@@ -1,0 +1,6 @@
+repositories:
+  apriltag_msgs:
+    type: git
+    url: git@github.com:benediktkreis/apriltag_msgs.git
+    version: master
+

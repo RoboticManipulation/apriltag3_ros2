@@ -20,6 +20,19 @@ The camera intrinsics `K` in `CameraInfo` are used to compute the marker tag pos
 
 The tag poses are published on the standard TF topic `/tf` with the header set to the image header and `child_frame_id` set to either `tag<family>:<id>` (e.g. "tag36h11:0") or the frame name selected via configuration file. Additional information about detected tags is published as `AprilTagDetectionArray` message, which contains the original homography  matrix, the `hamming` distance and the `decision_margin` of the detection.
 
+## Build
+
+```bash
+export WORKSPACE=~/apriltag3_ros2_ws
+mkdir -p $WORKSPACE/src
+cd $WORKSPACE
+
+git clone git@github.com:benediktkreis/apriltag3_ros2.git $WORKSPACE/src/apriltag3_ros2
+vcs import src --skip-existing --input $WORKSPACE/src/apriltag3_ros2/apriltag3_ros2.repos
+
+colcon build
+```
+
 ## Configuration
 
 The node is configured via a yaml configurations file. For the complete ROS yaml parameter file syntax, see: https://github.com/ros2/rcl/tree/master/rcl_yaml_param_parser.
