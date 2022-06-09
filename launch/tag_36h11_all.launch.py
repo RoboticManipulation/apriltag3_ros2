@@ -11,10 +11,10 @@ from launch.actions import (
 )
 
 # detect all 36h11 tags
-cfg_52h13 = {
+cfg_36h11 = {
     "image_transport": "raw",
     "family": "Standard52h13",
-    "size": 0.030,
+    "size": 0.040,
     "max_hamming": 0,
     "z_up": True
 }
@@ -27,7 +27,7 @@ def generate_launch_description():
         name='apriltag',
         package='apriltag_ros', plugin='AprilTagNode',
         remappings=[("/apriltag/image", "/camera/image"), ("/apriltag/camera_info", "/camera/camera_info")],
-        parameters=[cfg_52h13])
+        parameters=[cfg_36h11])
     container = ComposableNodeContainer(
         name='tag_container',
         namespace='apriltag',
