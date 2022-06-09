@@ -13,7 +13,7 @@ from launch.actions import (
 # detect all 36h11 tags
 cfg_36h11 = {
     "image_transport": "raw",
-    "family": "Standard52h13",
+    "family": "36h11",
     "size": 0.040,
     "max_hamming": 0,
     "z_up": True
