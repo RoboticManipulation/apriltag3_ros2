@@ -16,7 +16,8 @@ cfg_52h13 = {
     "family": "Standard52h13",
     "size": 0.030,
     "max_hamming": 0,
-    "z_up": True
+    "z_up": True,
+    #"debug": 0,
 }
 
  # Simulation arguments
