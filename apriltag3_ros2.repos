@@ -1,6 +1,9 @@
 repositories:
   apriltag_msgs:
     type: git
-    url: git@github.com:benediktkreis/apriltag_msgs.git
+    url: https://github.com/benediktkreis/apriltag_msgs.git
     version: master
-
+  apriltag:
+    type: git
+    url: git@github.com:AprilRobotics/apriltag.git
+    version: master
