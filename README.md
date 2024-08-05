@@ -27,7 +27,7 @@ export WORKSPACE=~/apriltag3_ros2_ws
 mkdir -p $WORKSPACE/src
 cd $WORKSPACE
 
-git clone git@github.com:benediktkreis/apriltag3_ros2.git $WORKSPACE/src/apriltag3_ros2
+git clone git@github.com:RoboticManipulation/apriltag3_ros2.git $WORKSPACE/src/apriltag3_ros2
 vcs import src --skip-existing --input $WORKSPACE/src/apriltag3_ros2/apriltag3_ros2.repos
 
 colcon build
