@@ -14,7 +14,7 @@ from launch.actions import (
 cfg_52h13 = {
     "image_transport": "raw",
     "family": "Standard52h13",
-    "size": 0.030,
+    "size": 0.024,
     "max_hamming": 0,
     "z_up": True,
     #"debug": 0,
@@ -27,7 +27,7 @@ def generate_launch_description():
     composable_node = ComposableNode(
         name='apriltag',
         package='apriltag_ros', plugin='AprilTagNode',
-        remappings=[("/apriltag/image", "/camera/color/image_raw"), ("/apriltag/camera_info", "/camera/color/camera_info")],
+        remappings=[("/apriltag/image", "/camera/color/image_rect_raw"), ("/apriltag/camera_info", "/camera/color/camera_info")],
         parameters=[cfg_52h13])
     container = ComposableNodeContainer(
         name='tag_container',
